@@ -5,12 +5,23 @@
 ### Changed
 
 - **Breaking** Renamed module from `xcodeproj` to `XcodeProj` https://github.com/tuist/xcodeproj/pull/398 by @pepibumur.
+- Add `override` flag to `PBXGroup.addFile(at:,sourceTree:,sourceRoot:)` https://github.com/tuist/xcodeproj/pull/410 by @mrylmz
+- Rename some internal variables to have a more representative name https://github.com/tuist/xcodeproj/pull/415 by @pepibumur.
 
 ### Added
 
 - **Breaking** Swift 5 support https://github.com/tuist/xcodeproj/pull/397 by @pepibumur.
 - `WorkspaceSettings.autoCreateSchemes` attribute https://github.com/tuist/xcodeproj/pull/399 by @pepibumur
 - Additional Swift 5 fixes: https://github.com/tuist/xcodeproj/pull/402 by @samisuteria
+- Make build phase name public by @llinardos.
+- Can access embed frameworks build phase for a target by @llinardos.
+- Added `com.apple.product-type.framework.static` to `PBXProductType`. https://github.com/tuist/xcodeproj/pull/347 by @ileitch.
+- Can add a not existing file to a group https://github.com/tuist/xcodeproj/pull/418 by @llinardos.
+- **Breaking** Add `SWIFT_COMPILATION_MODE` and `CODE_SIGN_IDENTITY` build settings, remove `DEBUG` flag for Release https://github.com/tuist/xcodeproj/pull/417 @dangthaison91 
+
+### Fixed
+
+- Carthage integration https://github.com/tuist/xcodeproj/pull/416 by @pepibumur.
 
 ## 6.7.0
 
