@@ -170,6 +170,10 @@
             ReferencedContainer = "container:Project.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <LocationScenarioReference
+         identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
+         referenceType = "1">
+      </LocationScenarioReference>
       <CommandLineArguments>
          <CommandLineArgument
             argument = "MyLaunchArgument"
@@ -185,10 +189,6 @@
       </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
-      <LocationScenarioReference
-         identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
-         referenceType = "1">
-      </LocationScenarioReference>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
