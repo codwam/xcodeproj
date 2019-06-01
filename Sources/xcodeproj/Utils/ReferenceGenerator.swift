@@ -191,9 +191,9 @@ final class ReferenceGenerator: ReferenceGenerating {
         if let targetProxyReference = targetDependency.targetProxyReference,
             targetProxyReference.temporary,
             let targetProxy = targetDependency.targetProxy,
-            let remoteGlobalIDReference = targetProxy.remoteGlobalIDReference {
+            let remoteGlobalIDString = targetProxy.remoteGlobalIDString {
             var identifiers = identifiers
-            identifiers.append(remoteGlobalIDReference.value)
+            identifiers.append(remoteGlobalIDString)
             fixReference(for: targetProxy, identifiers: identifiers)
         }
 
@@ -309,7 +309,8 @@ extension ReferenceGenerator {
                 return base
             }
         case .xcode:
-            return "\(acronym)_\(typeNameAndIdentifiers)_\(counter)".md5.uppercased()
+            let reference = "\(acronym)_\(typeNameAndIdentifiers)_\(counter)".md5.uppercased()
+            return String(reference.substring(to: reference.index(reference.startIndex, offsetBy: 24)))
         }
     }
 }
